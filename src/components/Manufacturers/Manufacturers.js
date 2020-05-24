@@ -27,7 +27,12 @@ function Manufacturers( {selectedManufacturer, changeManufacturer} ) {
         <option aria-label="None" value="" />
         {
           manufacturersList.map( manufacturer => (
-            <option value={manufacturer.name}>{manufacturer.name}</option>
+            <option
+              key={manufacturer.name}
+              value={manufacturer.name}
+            >
+              {manufacturer.name}
+            </option>
           ) )
         }
       </Select>
